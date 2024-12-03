@@ -37,3 +37,10 @@ jobs:
         run: |
           npm install
 
+      # Deploy to Azure WebApp
+      - name: Deploy to Azure WebApp
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          package: ${{ env.AZURE_WEB_APP_SECRET }}
