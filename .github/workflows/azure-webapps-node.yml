@@ -36,6 +36,9 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: install libOpenGl
+      run: sudo apt install libopengl0 -y
+
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
