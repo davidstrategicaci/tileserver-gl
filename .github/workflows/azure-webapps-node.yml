@@ -48,7 +48,7 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm install
-        nohup node .
+        nohup node . -b 0.0.0.0 -p 443 > tileserver.log 2>&1 &
 
 
     - name: 'Deploy to Azure WebApp'
